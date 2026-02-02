@@ -75,8 +75,10 @@ class PersonalAssistant:
         texts = {
             "introduction": [
                 f"👋 Hi! I'm {cfg['assistant_name']}, {cfg['alive_name']}'s assistant.\n"
-                "Please explain briefly why you want to contact them.\n"
-                "Type 'ok' to acknowledge."
+                "Please Choose Your Plan and Payment Mode and Reply Here To Continue.\n"
+                "[1month - 1$] ,  [6months - 6$], [12months - 10$].\n"
+                "Payment method - [usdt,upi,paypal].\n"
+                "Also Type 'ok' to acknowledge."
             ],
             "acknowledgment": [
                 "👍 Thanks for understanding!\n"
@@ -84,7 +86,7 @@ class PersonalAssistant:
             ],
             "warning": [
                 "⚠️ Warning {warn_count}/{max_warnings}\n"
-                "Please wait for approval before messaging again."
+               "Please Choose above plan and reply or wait for approval before messaging again."
             ],
             "approved": [
                 "✅ You are now approved! Feel free to continue."
@@ -292,3 +294,4 @@ def init(client):
         await event.reply(f"🚫 User `{uid}` has been blocked.")
 
     return assistant
+
